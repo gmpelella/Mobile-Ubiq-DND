@@ -5,16 +5,16 @@ package com.example.dnd.CharSheet.Item;
 public class Weapon {
     public enum damageTypes{
         ACID, BLUDGEONING, COLD, FIRE, FORCE, LIGHTNING, NECROTIC, PIERCING, POISON,
-        PSYCHIC, RADIANT, SLASHING, THUNDER;
+        PSYCHIC, RADIANT, SLASHING, THUNDER
     }
 
     public enum weaponType{
-        MELEE, RANGED;
+        MELEE, RANGED
     }
 
     public enum weaponProperties{
         AMMUNITION, FINESSE, HEAVY, LIGHT, LOADING, RANGE, REACH, SPECIAL, THROWN,
-        TWO_HANDED, VERSATILE;
+        TWO_HANDED, VERSATILE
     }
 
     private final String NAME;

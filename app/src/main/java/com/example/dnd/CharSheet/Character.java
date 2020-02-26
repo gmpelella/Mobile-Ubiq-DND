@@ -24,7 +24,7 @@ public class Character {
     //character info that changes on lvl up
     private String[] classes;
     private int level;
-
+    private AbilityScores abilityScores;
 
 
     //character info that rarely changes

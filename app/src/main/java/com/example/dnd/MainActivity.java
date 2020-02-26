@@ -1,12 +1,10 @@
 package com.example.dnd;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 
 public class MainActivity extends AppCompatActivity {
-
     //DND START
 
     @Override
