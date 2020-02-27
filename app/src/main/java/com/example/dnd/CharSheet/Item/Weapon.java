@@ -21,12 +21,12 @@ public class Weapon {
     private final damageTypes DAMAGE_TYPE;
     private final weaponProperties[] PROPERTIES;
     private final int[] DAMAGE_DICE;
-    private final moneyValue PRICE;
+    private final MoneyValue PRICE;
     private final int WEIGHT;
 
 
 
-    Weapon(String _name, damageTypes _damageType, int[] _damageDice, moneyValue _price,
+    Weapon(String _name, damageTypes _damageType, int[] _damageDice, MoneyValue _price,
            weaponProperties[] _properties, int _weight){
         NAME        = _name;
         DAMAGE_TYPE = _damageType;
