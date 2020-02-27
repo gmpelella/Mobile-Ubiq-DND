@@ -66,12 +66,12 @@ public class MoneyValue {
         return new MoneyValue(newCopper, newSilver, newGold, newPlatinum, newElectrum, USE_PLATINUM, USE_ELECTRUM);
     }
 
-    public MoneyValue removeMoney(int coppertoRemove, int silvertoRemove, int goldtoRemove, int platinumtoRemove, int electrumtoRemove){
-        int newCopper = COPPER - coppertoRemove;
-        int newSilver = SILVER - silvertoRemove;
-        int newGold = GOLD - goldtoRemove;
-        int newPlatinum = PLATINUM - platinumtoRemove;
-        int newElectrum = ELECTRUM - electrumtoRemove;
+    public MoneyValue removeMoney(int copperToRemove, int silverToRemove, int goldToRemove, int platinumToRemove, int electrumToRemove){
+        int newCopper = COPPER - copperToRemove;
+        int newSilver = SILVER - silverToRemove;
+        int newGold = GOLD - goldToRemove;
+        int newPlatinum = PLATINUM - platinumToRemove;
+        int newElectrum = ELECTRUM - electrumToRemove;
 
         if(newCopper < 0){      // convert silver to copper to get copper out of negative
             int neededSilver = 1 + (int) (Math.abs(newCopper) / copperToSilver);

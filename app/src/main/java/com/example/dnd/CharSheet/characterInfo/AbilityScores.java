@@ -1,5 +1,6 @@
 package com.example.dnd.CharSheet.characterInfo;
 
+//TODO: maybe move this into AbilityProficiencies. IDK, working on a mapping to unite these two
 public class AbilityScores {
     public enum abilityScoreTypes{
         STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA
@@ -21,47 +22,23 @@ public class AbilityScores {
     public int wisScore;
     public int chaScore;
 
-    // saving throws
-    public boolean strSavingProficient;
-    public boolean dexSavingProficient;
-    public boolean conSavingProficient;
-    public boolean intSavingProficient;
-    public boolean wisSavingProficient;
-    public boolean chaSavingProficient;
-
     public AbilityScores(int _strScore, int _dexScore, int _conScore, int _intScore, int _wisScore,
-                         int _chaScore, boolean _strProficient, boolean _dexProficient,
-                         boolean _conProficient, boolean _intProficient, boolean _wisProficient,
-                         boolean _chaProficient) {
+                         int _chaScore) {
         strScore = baseStr = _strScore;
         dexScore = baseDex = _dexScore;
         conScore = baseCon = _conScore;
         intScore = baseInt = _intScore;
         wisScore = baseWis = _wisScore;
         chaScore = baseCha = _chaScore;
-
-        strSavingProficient = _strProficient;
-        dexSavingProficient = _dexProficient;
-        conSavingProficient = _conProficient;
-        intSavingProficient = _intProficient;
-        wisSavingProficient = _wisProficient;
-        chaSavingProficient = _chaProficient;
     }
 
-    public AbilityScores(int[] _scores, boolean[] _proficiencies){
+    public AbilityScores(int[] _scores){
         strScore = baseStr = _scores[0];
         dexScore = baseDex = _scores[1];
         conScore = baseCon = _scores[2];
         intScore = baseInt = _scores[3];
         wisScore = baseWis = _scores[4];
         chaScore = baseCha = _scores[5];
-
-        strSavingProficient = _proficiencies[0];
-        dexSavingProficient = _proficiencies[1];
-        conSavingProficient = _proficiencies[2];
-        intSavingProficient = _proficiencies[3];
-        wisSavingProficient = _proficiencies[4];
-        chaSavingProficient = _proficiencies[5];
     }
 
     public int getAbilityModifier(abilityScoreTypes score){
