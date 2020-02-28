@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Dungeons & Dragons 5th Edition Mobile Character Sheet"
+        android:text="Export Character Sheet"
         android:textColor="#74F6D1"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,21 +30,22 @@
         android:shadowDx="30"
         android:shadowDy="30"
         android:shadowRadius="10"
-        android:text="Create a character"
+        android:text="List of clickable existing sheets"
         android:textColor="#74F6D1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainTitle"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <Button
         android:id="@+id/viewCharButton"
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
-        android:text="view character sheets"
+        android:text="tapping one generates pdf of it"
         android:textColor="#74F6D1"
         android:textColorHint="#FFFFFF"
         android:textSize="24sp"
@@ -52,14 +53,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createCharButton"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.311" />
 
     <Button
         android:id="@+id/importCharButton"
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
-        android:text="Import character sheet"
+        android:text="and then downloads that pdf to the device"
         android:textColor="#74F6D1"
         android:textColorHint="#FFFFFF"
         android:textSize="24sp"
@@ -67,20 +68,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCharButton"
-        app:layout_constraintVertical_bias="0.212" />
-
-    <Button
-        android:id="@+id/importCharButton2"
-        android:layout_width="287dp"
-        android:layout_height="74dp"
-        android:background="#979797"
-        android:text="Export character sheet to pdf"
-        android:textColor="#74F6D1"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/importCharButton"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintVertical_bias="0.582" />
 </androidx.constraintlayout.widget.ConstraintLayout>
