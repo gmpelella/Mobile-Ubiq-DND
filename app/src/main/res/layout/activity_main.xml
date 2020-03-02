@@ -12,28 +12,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-<<<<<<< HEAD
-        android:text="@string/mainTitle"
-=======
-        android:text="Dungeons &amp; Dragons 5th Edition Mobile Character Sheet"
->>>>>>> c3322e2ab63f3d03732f85587e3133be7992ea76
-        android:textColor="#74F6D1"
-        android:textSize="36sp"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
+        android:text="Dungeons &amp; Dragons 5th Edition Mobile Character Sheet"
+        android:textColor="#74F6D1"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/dieRollerButton"
+        android:layout_width="287dp"
+        android:layout_height="74dp"
+        android:background="#2F647C"
+        android:onClick="launchDieRoller"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/dieRollerButton"
+        android:textColor="#8EE8CE"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+        app:layout_constraintVertical_bias="0.051" />
 
     <Button
         android:id="@+id/createCharButton"
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
+        android:onClick="launchCreateChar"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
@@ -41,12 +58,11 @@
         android:text="@string/createCharButton"
         android:textColor="#74F6D1"
         android:textSize="24sp"
-        android:onClick="launchCreateChar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintTop_toBottomOf="@+id/dieRollerButton"
+        app:layout_constraintVertical_bias="0.085" />
 
     <Button
         android:id="@+id/viewCharButton"
@@ -93,18 +109,18 @@
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
-        android:text="@string/exportCharButton"
-        android:textColor="#74F6D1"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24sp"
+        android:onClick="launchExportChar"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
-        android:onClick="launchExportChar"
+        android:text="@string/exportCharButton"
+        android:textColor="#74F6D1"
+        android:textColorHint="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/importCharButton"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintVertical_bias="0.505" />
 </androidx.constraintlayout.widget.ConstraintLayout>

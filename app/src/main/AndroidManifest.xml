@@ -18,6 +18,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".DieRollerActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dnd.MainActivity" />
+        </activity>
+        <activity
             android:name=".CharSheetViewActivity"
             android:parentActivityName=".MainActivity">
             <meta-data

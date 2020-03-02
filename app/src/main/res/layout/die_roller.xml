@@ -8,17 +8,17 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/mainTitle"
+        android:id="@+id/dice_roller_main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/create_a_character"
-        android:textColor="#74F6D1"
-        android:textSize="36sp"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
+        android:text="@string/dice_roller_main_title"
+        android:textColor="#74F6D1"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,34 +34,33 @@
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
-        android:text="Create a character"
+        android:text="This is your zone Grace"
         android:textColor="#74F6D1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintTop_toBottomOf="@+id/dice_roller_main_title"
+        app:layout_constraintVertical_bias="0.106" />
 
     <Button
         android:id="@+id/viewCharButton"
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
-        android:text="view character sheets"
-        android:textColor="#74F6D1"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24sp"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
+        android:text="view character sheets"
+        android:textColor="#74F6D1"
+        android:textColorHint="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createCharButton"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.271" />
 
     <Button
         android:id="@+id/importCharButton"

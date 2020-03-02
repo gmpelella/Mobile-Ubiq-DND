@@ -5,4 +5,7 @@
     <string name="viewCharSheetButton">view character sheets</string>
     <string name="importCharButton">Import character sheet</string>
     <string name="exportCharButton">Export character sheet to pdf</string>
+    <string name="create_a_character">Create a character</string>
+    <string name="dieRollerButton">roll some dice</string>
+    <string name="dice_roller_main_title">Die Roller</string>
 </resources>
