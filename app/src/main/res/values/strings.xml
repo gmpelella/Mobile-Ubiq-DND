@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DnD</string>
+    <string name="mainTitle"><![CDATA[Dungeons & Dragons 5th Edition Mobile Character Sheet]]></string>
+    <string name="createCharButton">Create a character</string>
+    <string name="viewCharSheetButton">view character sheets</string>
+    <string name="importCharButton">Import character sheet</string>
+    <string name="exportCharButton">Export character sheet to pdf</string>
 </resources>

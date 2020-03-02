@@ -17,7 +17,7 @@ public class Character {
 
 
     private Weapon[] weapons;
-    private Spell[] reddiedSpells;
+    private Spell[] readiedSpells; //spelling fix
     private Spell[] spellList;
 
 
