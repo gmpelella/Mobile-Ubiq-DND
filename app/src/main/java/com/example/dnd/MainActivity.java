@@ -17,10 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void launchDieRoller(View view) {
-        Intent intent = new Intent(this, DieRollerActivity.class);
-        startActivity(intent);
-    }
+
 
     public void launchCreateChar(View view) {
         Intent intent = new Intent(this, CreateCharActivity.class);

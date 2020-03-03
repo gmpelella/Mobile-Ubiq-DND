@@ -33,4 +33,8 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
     public void changeCharacterImage(View view) {
 
     }
+    public void launchDieRoller(View view) {
+        Intent intent = new Intent(this, DieRollerActivity.class);
+        startActivity(intent);
+    }
 }
