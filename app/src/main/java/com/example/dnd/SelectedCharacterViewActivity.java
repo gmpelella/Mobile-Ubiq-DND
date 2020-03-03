@@ -33,14 +33,15 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
     public void changeCharacterImage(View view) {
 
     }
-<<<<<<< HEAD
 
     public void launchStatsPage(View view) {
         Intent intent = new Intent(this, StatsPageActivity.class);
-=======
+        startActivity(intent);
+    }
+
     public void launchDieRoller(View view) {
         Intent intent = new Intent(this, DieRollerActivity.class);
->>>>>>> 11a8bf8333b7d1f79ebd06c1f16fd5d73fa3dfa0
+
         startActivity(intent);
     }
 }
