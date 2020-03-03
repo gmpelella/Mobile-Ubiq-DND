@@ -31,6 +31,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dnd.MainActivity" />
         </activity>
+
+        <activity android:name=".SelectedCharacterViewActivity"
+            android:parentActivityName=".CharSheetViewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dnd.CharSheetViewActivity" />
+        </activity>
+
         <activity
             android:name=".CreateCharActivity"
             android:parentActivityName=".MainActivity">

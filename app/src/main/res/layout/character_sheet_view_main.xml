@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#575757"
-    tools:context=".MainActivity">
+    tools:context=".CharSheetViewActivity">
 
     <TextView
         android:id="@+id/mainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Character Sheets:"
+        android:text="@string/character_sheets"
         android:textColor="#74F6D1"
         android:textSize="36sp"
         android:shadowColor="#000000"
@@ -30,11 +30,12 @@
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
+        android:onClick="launchSelectedCharView"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
-        android:text="Here would be a list of characters"
+        android:text="@string/test_here_button"
         android:textColor="#74F6D1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,41 +45,5 @@
         app:layout_constraintTop_toBottomOf="@+id/mainTitle"
         app:layout_constraintVertical_bias="0.113" />
 
-    <Button
-        android:id="@+id/viewCharButton"
-        android:layout_width="287dp"
-        android:layout_height="74dp"
-        android:background="#979797"
-        android:text="view character sheets"
-        android:textColor="#74F6D1"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24sp"
-        android:shadowColor="#000000"
-        android:shadowDx="10"
-        android:shadowDy="3"
-        android:shadowRadius="10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createCharButton"
-        app:layout_constraintVertical_bias="0.311" />
 
-    <Button
-        android:id="@+id/importCharButton"
-        android:layout_width="287dp"
-        android:layout_height="74dp"
-        android:background="#979797"
-        android:text="Import/export character sheet"
-        android:textColor="#74F6D1"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24sp"
-        android:shadowColor="#000000"
-        android:shadowDx="10"
-        android:shadowDy="3"
-        android:shadowRadius="10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewCharButton"
-        app:layout_constraintVertical_bias="0.582" />
 </androidx.constraintlayout.widget.ConstraintLayout>

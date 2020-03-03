@@ -14,4 +14,11 @@ public class CharSheetViewActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.character_sheet_view_main);
     }
+
+    public void launchSelectedCharView(View view) {
+        Intent intent = new Intent(this, SelectedCharacterViewActivity.class);
+        startActivity(intent);
+    }
+
+
 }
