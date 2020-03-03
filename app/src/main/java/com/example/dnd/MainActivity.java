@@ -26,15 +26,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        createAndStoreSampleChar();
-        loadSampleChar();
     }
 
 
 
     public void launchCreateChar(View view) {
+        createAndStoreSampleChar();
+        loadSampleChar();
+
         Intent intent = new Intent(this, CreateCharActivity.class);
         startActivity(intent);
+
     }
 
     public void launchViewChars(View view) {
