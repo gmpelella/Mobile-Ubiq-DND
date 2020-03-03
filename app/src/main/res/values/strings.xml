@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">DnD</string>
+    <string name="mainTitle"><![CDATA[Dungeons & Dragons 5th Edition Mobile Character Sheet]]></string>
+    <string name="createCharButton">Create a character</string>
+    <string name="viewCharSheetButton">view character sheets</string>
+    <string name="importCharButton">Import character sheet</string>
+    <string name="exportCharButton">Export character sheet to pdf</string>
+    <string name="create_a_character">Create a character</string>
+    <string name="dieRollerButton">roll some dice</string>
+    <string name="dice_roller_main_title">Die Roller</string>
+    <string name="charactername">CharacterName</string>
+    <string name="classlevel">ClassLevel</string>
+    <string name="Race">Race</string>
+    <string name="Background">Background</string>
+    <string name="ArmorClass">Armor Class</string>
+    <string name="InitiativeText">Initiative</string>
+    <string name="Speed">Speed</string>
+    <string name="character_statistics">character statistics</string>
+    <string name="combat">combat</string>
+    <string name="spells">spells</string>
+    <string name="inventory">inventory</string>
+    <string name="personal_information">Personal information</string>
+    <string name="test_here_button">Here would be a list of characters</string>
+    <string name="character_sheets">Character Sheets:</string>
+    <string name="create_character_title">Create a character</string>
 </resources>

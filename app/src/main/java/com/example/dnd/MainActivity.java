@@ -1,7 +1,11 @@
 package com.example.dnd;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -13,7 +17,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    //ROLL DICE TIME CLACULATOR
-    //grace job
+    public void launchDieRoller(View view) {
+        Intent intent = new Intent(this, DieRollerActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchCreateChar(View view) {
+        Intent intent = new Intent(this, CreateCharActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchViewChars(View view) {
+        Intent intent = new Intent(this, CharSheetViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchImportChar(View view) {
+        Intent intent = new Intent(this, ImportCharActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchExportChar(View view) {
+        Intent intent = new Intent(this, ExportCharActivity.class);
+        startActivity(intent);
+    }
+
 
 }

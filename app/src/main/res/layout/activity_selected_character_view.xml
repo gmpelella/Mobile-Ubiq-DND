@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#575757"
+    tools:context=".SelectedCharacterViewActivity">
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="0dp"
+        android:layout_height="245dp"
+        android:background="#74F6D1"
+        android:text="@string/charactername"
+        android:textSize="36sp"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <ImageView
+        android:id="@+id/characterImage"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:onClick="changeCharacterImage"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="@+id/characterName"
+        app:layout_constraintTop_toTopOf="@+id/characterName"
+        app:layout_constraintVertical_bias="0.333"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/classLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/classlevel"
+        android:textSize="24sp"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toStartOf="@+id/characterImage"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <TextView
+        android:id="@+id/Race"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Race"
+        android:textSize="24sp"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toStartOf="@+id/characterImage"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classLevel"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Background"
+        android:textSize="24sp"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toStartOf="@+id/characterImage"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Race"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <TextView
+        android:id="@+id/armorClassText"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ArmorClass"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <TextView
+        android:id="@+id/initiativeText"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/InitiativeText"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toEndOf="@+id/armorClassText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <TextView
+        android:id="@+id/Speed"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/Speed"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toEndOf="@+id/initiativeText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <EditText
+        android:id="@+id/armorClassValue"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+        android:background="#E0FFF8"
+        android:ems="10"
+        android:gravity="clip_horizontal|center_horizontal|center_vertical"
+        android:inputType="number"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/armorClassText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/initiativeValue"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+        android:background="#E0FFF8"
+        android:ems="10"
+        android:inputType="number"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toEndOf="@+id/armorClassValue"
+        app:layout_constraintTop_toBottomOf="@+id/initiativeText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/speedValue"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="184dp"
+        android:background="#E0FFF8"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        app:layout_constraintBottom_toBottomOf="@+id/characterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toEndOf="@+id/initiativeValue"
+        app:layout_constraintTop_toBottomOf="@+id/Speed"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/statsButton"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/character_statistics" />
+
+            <Button
+                android:id="@+id/combatButton"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/combat" />
+
+            <Button
+                android:id="@+id/spellButton"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/spells" />
+
+            <Button
+                android:id="@+id/inventoryButton"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/inventory" />
+
+            <Button
+                android:id="@+id/personalInfoButton"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="100dp"
+                android:text="@string/personal_information" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
