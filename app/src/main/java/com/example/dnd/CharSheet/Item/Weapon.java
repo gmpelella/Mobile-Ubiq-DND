@@ -26,7 +26,7 @@ public class Weapon {
 
 
 
-    Weapon(String _name, damageTypes _damageType, int[] _damageDice, MoneyValue _price,
+    public Weapon(String _name, damageTypes _damageType, int[] _damageDice, MoneyValue _price,
            weaponProperties[] _properties, int _weight){
         NAME        = _name;
         DAMAGE_TYPE = _damageType;
