@@ -82,7 +82,6 @@ public class AbilitiesAndProficiencies {
 
         proficiencyBonus = _proficiencyBonus;
     }
-
     // sets all given proficiencies to false. sets the ability scores to the given vals
     public AbilitiesAndProficiencies(int _proficiencyBonus, int _strLevel, int _dexLevel,
                                      int _conLevel, int _intLevel, int _wisLevel, int _chaLevel){

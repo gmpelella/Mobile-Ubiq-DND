@@ -3,7 +3,9 @@ package com.example.dnd.CharSheet;
 import com.example.dnd.CharSheet.Item.*;
 import com.example.dnd.CharSheet.characterInfo.*;
 
-public class Character {
+import java.io.Serializable;
+
+public class Character implements Serializable {
     //Character info that can be looked at but not changed
     public final String NAME;
     public final Race RACE;
@@ -32,7 +34,8 @@ public class Character {
 
 
     public Character(String _name, Race _race, String _background, String _allignment, String playerName,
-                    int _level, String[] _classes){
+                    int _level, String[] _classes, int _experience, CombatInfo _combatInfo, Weapon[] _weapons,
+                     Spell[] _spells, Spell[] _readiedSpells, AbilitiesAndProficiencies _abilities){
         NAME = _name;
         RACE = _race;
         BACKGROUND = _background;
@@ -41,5 +44,12 @@ public class Character {
 
         level = _level;
         classes = _classes;
+
+        experience = _experience;
+        combatInfo = _combatInfo;
+        weapons = _weapons;
+        spellList = _spells;
+        readiedSpells = _readiedSpells;
+        abilityScores = _abilities;
     }
 }
