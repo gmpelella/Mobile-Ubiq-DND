@@ -54,7 +54,7 @@
                 android:shadowDx="10"
                 android:shadowDy="3"
                 android:shadowRadius="3"
-                android:text="@string/test_here_button"
+                android:text="@string/create_a_new_character"
                 android:textColor="#74F6D1"
                 android:textSize="24sp" />
         </LinearLayout>

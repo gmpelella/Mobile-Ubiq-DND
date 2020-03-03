@@ -11,7 +11,7 @@
         android:id="@+id/mainTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center|center_vertical"
+        android:gravity="center|left|center_vertical"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
@@ -23,6 +23,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/dieRollerButton2"
+        android:layout_width="95dp"
+        android:layout_height="32dp"
+        android:background="#2F647C"
+        android:onClick="launchDieRoller"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:text="@string/roll_dice"
+        android:textColor="#8EE8CE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainTitle"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

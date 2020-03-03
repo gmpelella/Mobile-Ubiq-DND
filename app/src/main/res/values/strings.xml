@@ -56,4 +56,6 @@
     <string name="religion">Religion</string>
     <string name="investigation">Investigation</string>
     <string name="roll_dice_text">roll dice!</string>
+    <string name="create_a_new_character">Create a new character</string>
+    <string name="roll_dice">roll dice</string>
 </resources>
