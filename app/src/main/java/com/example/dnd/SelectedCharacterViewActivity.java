@@ -23,6 +23,9 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
         speed
         that's all the fillable things on this window
          */
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_character_view);
     }
