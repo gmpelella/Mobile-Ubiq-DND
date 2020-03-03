@@ -15,7 +15,7 @@
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
-        android:shadowRadius="10"
+        android:shadowRadius="3"
         android:text="@string/character_sheets"
         android:textColor="#74F6D1"
         android:textSize="36sp"
@@ -53,7 +53,7 @@
                 android:shadowColor="#000000"
                 android:shadowDx="10"
                 android:shadowDy="3"
-                android:shadowRadius="10"
+                android:shadowRadius="3"
                 android:text="@string/test_here_button"
                 android:textColor="#74F6D1"
                 android:textSize="24sp" />

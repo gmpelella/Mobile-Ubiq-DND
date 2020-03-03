@@ -22,4 +22,5 @@
     <string name="personal_information">Personal information</string>
     <string name="test_here_button">Here would be a list of characters</string>
     <string name="character_sheets">Character Sheets:</string>
+    <string name="create_character_title">Create a character</string>
 </resources>
