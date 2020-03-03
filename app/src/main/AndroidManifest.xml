@@ -39,6 +39,15 @@
                 android:value="com.example.dnd.CharSheetViewActivity" />
         </activity>
 
+        <activity android:name=".StatsPageActivity"
+            android:parentActivityName=".SelectedCharacterViewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dnd.SelectedCharacterViewActivity" />
+        </activity>
+
+
+
         <activity
             android:name=".CreateCharActivity"
             android:parentActivityName=".MainActivity">
