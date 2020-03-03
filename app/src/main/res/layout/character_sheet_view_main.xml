@@ -9,41 +9,56 @@
 
     <TextView
         android:id="@+id/mainTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="325dp"
+        android:layout_height="82dp"
         android:gravity="center"
-        android:text="@string/character_sheets"
-        android:textColor="#74F6D1"
-        android:textSize="36sp"
         android:shadowColor="#000000"
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="10"
+        android:text="@string/character_sheets"
+        android:textColor="#74F6D1"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.063" />
 
-    <Button
-        android:id="@+id/createCharButton"
-        android:layout_width="287dp"
-        android:layout_height="74dp"
-        android:background="#979797"
-        android:onClick="launchSelectedCharView"
-        android:shadowColor="#000000"
-        android:shadowDx="10"
-        android:shadowDy="3"
-        android:shadowRadius="10"
-        android:text="@string/test_here_button"
-        android:textColor="#74F6D1"
-        android:textSize="24sp"
+    <ScrollView
+        android:id="@+id/characterList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#399886"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainTitle"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.403">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/createCharButton"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:layout_margin="25dp"
+                android:layout_marginTop="50dp"
+                android:background="#575757"
+                android:onClick="launchSelectedCharView"
+                android:shadowColor="#000000"
+                android:shadowDx="10"
+                android:shadowDy="3"
+                android:shadowRadius="10"
+                android:text="@string/test_here_button"
+                android:textColor="#74F6D1"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
