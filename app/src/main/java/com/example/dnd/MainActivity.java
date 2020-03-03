@@ -30,10 +30,7 @@ public class MainActivity extends AppCompatActivity {
         loadSampleChar();
     }
 
-    public void launchDieRoller(View view) {
-        Intent intent = new Intent(this, DieRollerActivity.class);
-        startActivity(intent);
-    }
+
 
     public void launchCreateChar(View view) {
         Intent intent = new Intent(this, CreateCharActivity.class);
