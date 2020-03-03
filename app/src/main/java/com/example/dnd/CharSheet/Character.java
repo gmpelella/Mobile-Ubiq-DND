@@ -24,11 +24,10 @@ public class Character {
     //character info that changes on lvl up
     private String[] classes;
     private int level;
-    private AbilityScores abilityScores;
+    private AbilitiesAndProficiencies abilityScores;
 
 
     //character info that rarely changes
-
 
 
 
@@ -41,5 +40,6 @@ public class Character {
         PLAYER_NAME = playerName;
 
         level = _level;
+        classes = _classes;
     }
 }
