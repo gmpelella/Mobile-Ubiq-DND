@@ -1,9 +1,12 @@
 package com.example.dnd.CharSheet.Item;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Weapon {
-    public enum damageTypes{
+import java.io.Serializable;
+
+public class Weapon implements Serializable {
+    public enum damageTypes {
         ACID, BLUDGEONING, COLD, FIRE, FORCE, LIGHTNING, NECROTIC, PIERCING, POISON,
         PSYCHIC, RADIANT, SLASHING, THUNDER
     }
@@ -26,8 +29,9 @@ public class Weapon {
 
 
 
-    public Weapon(String _name, damageTypes _damageType, int[] _damageDice, MoneyValue _price,
-           weaponProperties[] _properties, int _weight){
+    public Weapon(@JsonProperty("name") String _name, @JsonProperty("DAMAGE_TYPE") damageTypes _damageType,
+                  @JsonProperty("DAMAGE_DICE") int[] _damageDice, @JsonProperty("PRICE") MoneyValue _price,
+                  @JsonProperty("PROPERTIES") weaponProperties[] _properties, @JsonProperty("WEIGHT") int _weight){
         NAME        = _name;
         DAMAGE_TYPE = _damageType;
         DAMAGE_DICE = _damageDice;

@@ -1,6 +1,10 @@
 package com.example.dnd.CharSheet.Item;
 
-public class MoneyValue {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
+
+public class MoneyValue implements Serializable {
     //conversion vals
     public final int copperToSilver = 10;
     public final int silverToGold = 10;
@@ -19,7 +23,10 @@ public class MoneyValue {
     public final boolean USE_ELECTRUM;
     public final boolean USE_PLATINUM;
 
-    public MoneyValue(int _copper, int _silver, int _gold, int _platinum, int _electrum, boolean _usePlatinum, boolean _useElectrum){
+    public MoneyValue(@JsonProperty("COPPER") int _copper, @JsonProperty("SILVER") int _silver,
+                      @JsonProperty("GOLD") int _gold, @JsonProperty("PLATINUM") int _platinum,
+                      @JsonProperty("ELECTRUM") int _electrum, @JsonProperty("USE_PLATINUM") boolean _usePlatinum,
+                      @JsonProperty("USE_ELECTRUM") boolean _useElectrum){
         COPPER      = _copper;
         SILVER      = _silver;
         ELECTRUM    = _electrum;

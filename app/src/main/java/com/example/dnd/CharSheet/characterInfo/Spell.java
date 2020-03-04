@@ -1,4 +1,9 @@
 package com.example.dnd.CharSheet.characterInfo;
 
-public class Spell {
+import java.io.Serializable;
+
+public class Spell implements Serializable {
+    public Spell(){
+        return;
+    }
 }

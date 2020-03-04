@@ -1,6 +1,10 @@
 package com.example.dnd.CharSheet.characterInfo;
 
-public class CombatInfo {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
+
+public class CombatInfo implements Serializable {
     private int initiative;
     private int[] speed;
     private int armourClass;
@@ -13,8 +17,11 @@ public class CombatInfo {
     private int deathSavesSuccess;
     private int deathSaveFailure;
 
-    public CombatInfo(int _initiative, int[] _speed, int _armourClass, int _maxHP, int _currHP,
-                      int _temp, int[] _hitDice, int _deathSavesSuccess, int _deathSaveFailure){
+    public CombatInfo(@JsonProperty("initiative") int _initiative, @JsonProperty("speed") int[] _speed,
+                      @JsonProperty("armourClass") int _armourClass, @JsonProperty("maxHP") int _maxHP,
+                      @JsonProperty("currHP") int _currHP, @JsonProperty("tempHP") int _temp,
+                      @JsonProperty("hitDice") int[] _hitDice, @JsonProperty("deathSavesSuccess") int _deathSavesSuccess,
+                      @JsonProperty("deathSavesFailure") int _deathSaveFailure){
         initiative = _initiative;
         speed = _speed;
         armourClass = _armourClass;

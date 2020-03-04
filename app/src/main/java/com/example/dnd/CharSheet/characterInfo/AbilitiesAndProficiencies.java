@@ -1,10 +1,13 @@
 package com.example.dnd.CharSheet.characterInfo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AbilitiesAndProficiencies {
+public class AbilitiesAndProficiencies implements Serializable {
     //TODO: maybe add armour and weapons proficiencies, tools maybe?
     public enum allProficiencies {
         //Strength Proficiencies
@@ -82,6 +85,7 @@ public class AbilitiesAndProficiencies {
 
         proficiencyBonus = _proficiencyBonus;
     }
+
     // sets all given proficiencies to false. sets the ability scores to the given vals
     public AbilitiesAndProficiencies(int _proficiencyBonus, int _strLevel, int _dexLevel,
                                      int _conLevel, int _intLevel, int _wisLevel, int _chaLevel){
@@ -119,6 +123,14 @@ public class AbilitiesAndProficiencies {
         abilityLevelMap.put(allProficiencies.ParentAbility.CHARISMA, _chaLevel);
 
         proficiencyBonus = _proficiencyBonus;
+    }
+
+    public AbilitiesAndProficiencies(@JsonProperty("proficiencyBonus") int _proficiencyBonus,
+                                     @JsonProperty("proficiencyMap") Map<allProficiencies, Boolean> availableProficiencies,
+                                     @JsonProperty("abilityLevelMap") Map<allProficiencies.ParentAbility, Integer> abilityProficiencies){
+        proficiencyBonus = _proficiencyBonus;
+        proficiencyMap = availableProficiencies;
+        abilityLevelMap = abilityProficiencies;
     }
 
     public int getSkillBonus(allProficiencies targetProficiency){

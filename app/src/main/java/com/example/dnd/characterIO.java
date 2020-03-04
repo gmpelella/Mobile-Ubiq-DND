@@ -1,9 +1,15 @@
 package com.example.dnd;
 
+import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 
 import com.example.dnd.CharSheet.Character;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -16,30 +22,33 @@ public class characterIO {
         currContext = _currContext;
     }
 
-    public void storeChar(Character character) {
+    public void storeChar(Character character, Activity currActivity) {
         try {
-            FileOutputStream fos = currContext.openFileOutput("sampleChar", Context.MODE_PRIVATE);
-            ObjectOutputStream os = new ObjectOutputStream(fos);
-            os.writeObject(this);
-            os.close();
-            fos.close();
+            //JSON Serializer
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+            FileOutputStream jsonFile = currContext.openFileOutput("sampleChar.json", Context.MODE_PRIVATE);
+
+            mapper.writeValue(jsonFile, character);
+
         }catch(Exception e){
-            e.printStackTrace();
+            Log.e("FileWriting" , e.getMessage());
         }
     }
 
     public Character readChar(){
         try{
-            FileInputStream fis = currContext.openFileInput("sampleChar");
-            ObjectInputStream is = new ObjectInputStream(fis);
-            Character importedChar = (Character) is.readObject();
-            is.close();
+            FileInputStream fis = currContext.openFileInput("sampleChar.json");
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+
+            Character importedChar = mapper.readValue(fis, Character.class);
+
             fis.close();
-            return importedChar;
+            return  importedChar;
         }catch(Exception e){
-            e.printStackTrace();
+            Log.e("FileReading" , e.getMessage());
         }
         return null;
     }
-
 }

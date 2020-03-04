@@ -26,9 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        createAndStoreSampleChar();
     }
-
-
 
     public void launchCreateChar(View view) {
         createAndStoreSampleChar();
@@ -56,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void createAndStoreSampleChar(){
         characterIO charIO = new characterIO(getApplicationContext());
+
         Character sampleChar = new Character("Kel'Shri", new Race("Wood Elf"), "Noble", "Neutral Good",
                 "greatQuestion", 2, new String[]{"Cleric"}, 500, new CombatInfo(3,
                 new int[]{30}, 15, 9, 9, 0, new int[]{6}, 0,0),
@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
                 new ArrayList<>(Arrays.asList(new AbilitiesAndProficiencies.allProficiencies[]{AbilitiesAndProficiencies.allProficiencies.CONSTITUTION})),
                 13, 7,10,14,10, 9));
 
-        charIO.storeChar(sampleChar);
+            charIO.storeChar(sampleChar, this);
     }
 
     public void loadSampleChar(){
         characterIO charIO = new characterIO(getApplicationContext());
-        Character retrievedChar = charIO.readChar();
+        Character retrievedCharJSON = charIO.readChar();
 
         Log.i("Pointless Log", "Breakpoint Me");
     }
