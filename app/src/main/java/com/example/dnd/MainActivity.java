@@ -15,6 +15,7 @@ import com.example.dnd.CharSheet.characterInfo.Race;
 import com.example.dnd.CharSheet.characterInfo.Spell;
 import com.example.dnd.CharSheet.Character;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -26,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        createAndStoreSampleChar();
+        File jsonFile = getBaseContext().getFileStreamPath("sampleChar.json");
+        if(!jsonFile.exists()) {
+            createAndStoreSampleChar();
+        }
     }
 
     public void launchCreateChar(View view) {
