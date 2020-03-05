@@ -5,19 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< HEAD
+
 import android.widget.Button;
 import android.widget.*;
-=======
-import android.widget.EditText;
->>>>>>> 34c9241904d2ce1d4d49500095ebf4759e5e68ae
+
 
 import com.example.dnd.CharSheet.Character;
 
 public class SelectedCharacterViewActivity extends AppCompatActivity {
 
     Character sampleChar;
-<<<<<<< HEAD
     EditText charName;
     //ImageView charView
     EditText classLevel;
@@ -28,8 +25,7 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
     EditText speed;
 
 
-=======
->>>>>>> 34c9241904d2ce1d4d49500095ebf4759e5e68ae
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
