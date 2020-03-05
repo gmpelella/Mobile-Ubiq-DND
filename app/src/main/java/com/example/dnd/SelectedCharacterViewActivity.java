@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import android.widget.Button;
 import android.widget.*;
 
 
@@ -42,10 +41,13 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
         that's all the fillable things on this window
          */
 
-        charName = (EditText) findViewById(R.id.characterName);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_selected_character_view);
+
+        charName = (EditText) findViewById(R.id.selectedCharacterName);
         classLevel = (EditText) findViewById(R.id.classLevel);
         races = (EditText) findViewById(R.id.Race);
-        background = (EditText) findViewById(R.id.characterName);
+        background = (EditText) findViewById(R.id.background);
         armourClass = (EditText) findViewById(R.id.armorClassValue);
         initiative = (EditText) findViewById(R.id.initiativeValue);
         speed = (EditText) findViewById(R.id.speedValue);
@@ -53,18 +55,12 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
         sampleChar = (Character) getIntent().getSerializableExtra("charSheet");
 
         charName.setText(sampleChar.NAME);
-        classLevel.setText(sampleChar.RACE.name + sampleChar.level);
-        races.setText(sampleChar.getFirstClass());
+        classLevel.setText(sampleChar.getFirstClass() + sampleChar.level);
+        races.setText(sampleChar.RACE.name);
         background.setText(sampleChar.BACKGROUND);
-        armourClass.setText(sampleChar.combatInfo.armourClass);
-        initiative.setText(sampleChar.combatInfo.initiative);
-        speed.setText(sampleChar.combatInfo.getFirstSpeed());
-
-        
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selected_character_view);
-
-        sampleChar = (Character) getIntent().getSerializableExtra("charSheet");
+        armourClass.setText(sampleChar.combatInfo.armourClass + "");
+        initiative.setText(sampleChar.combatInfo.initiative + "");
+        speed.setText(sampleChar.combatInfo.getFirstSpeed() + "");
     }
 
 

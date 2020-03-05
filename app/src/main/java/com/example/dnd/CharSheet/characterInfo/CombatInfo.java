@@ -1,5 +1,6 @@
 package com.example.dnd.CharSheet.characterInfo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
@@ -33,5 +34,6 @@ public class CombatInfo implements Serializable {
         deathSaveFailure = _deathSaveFailure;
     }
 
+    @JsonIgnore
     public int getFirstSpeed() {return speed[0];}
 }
