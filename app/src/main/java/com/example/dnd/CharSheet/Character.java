@@ -2,6 +2,7 @@ package com.example.dnd.CharSheet;
 
 import com.example.dnd.CharSheet.Item.*;
 import com.example.dnd.CharSheet.characterInfo.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -58,5 +59,14 @@ public class Character implements Serializable {
         spellList = _spells;
         readiedSpells = _readiedSpells;
         abilityScores = _abilities;
+    }
+
+    @JsonIgnore
+    public String getFirstClass(){
+        return classes[0];
+    }
+
+    public int getLevel(){
+        return level;
     }
 }

@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/createCharButton"
+        android:id="@+id/selectCharButton"
         android:layout_width="287dp"
         android:layout_height="74dp"
         android:background="#979797"
@@ -62,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createCharButton"
+        app:layout_constraintTop_toBottomOf="@+id/selectCharButton"
         app:layout_constraintVertical_bias="0.13" />
 
     <Button

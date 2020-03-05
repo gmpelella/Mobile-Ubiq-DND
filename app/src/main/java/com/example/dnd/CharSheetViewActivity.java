@@ -9,7 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.dnd.CharSheet.Character;
+
 public class CharSheetViewActivity extends AppCompatActivity{
+
+    Character sampleChar;
+    Button selectChar ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +29,10 @@ public class CharSheetViewActivity extends AppCompatActivity{
         //create a new button
         //w everything thats currently in the existing button
         //make the text of the button = the name of the character, class, level
+        selectChar = (Button) findViewById(R.id.selectCharButton);
 
-//        Button myButton = new Button(this);
-//        myButton.setText("Push Me");
-//
-//        LinearLayout ll = (LinearLayout)findViewById(R.id.buttonlayout);
-//        LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-//        ll.addView(myButton, lp);
-
+        sampleChar = (Character) getIntent().getSerializableExtra("charSheet");
+        selectChar.setText(sampleChar.NAME + " | " + sampleChar.getFirstClass() + " | lvl" + sampleChar.getLevel());
     }
 
     public void launchSelectedCharView(View view) {

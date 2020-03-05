@@ -30,16 +30,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchCreateChar(View view) {
-        createAndStoreSampleChar();
-        loadSampleChar();
-
         Intent intent = new Intent(this, CreateCharActivity.class);
         startActivity(intent);
-
     }
 
     public void launchViewChars(View view) {
         Intent intent = new Intent(this, CharSheetViewActivity.class);
+        intent.putExtra("charSheet", loadSampleChar());
+
         startActivity(intent);
     }
 
@@ -69,11 +67,13 @@ public class MainActivity extends AppCompatActivity {
             charIO.storeChar(sampleChar, this);
     }
 
-    public void loadSampleChar(){
+    public Character loadSampleChar(){
         characterIO charIO = new characterIO(getApplicationContext());
         Character retrievedCharJSON = charIO.readChar();
 
         Log.i("Pointless Log", "Breakpoint Me");
+
+        return retrievedCharJSON;
     }
 
 }
