@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 
 public class Race implements Serializable {
-    String name;
+    public String name;
 
     public Race(@JsonProperty("name") String _name){
         name = _name;

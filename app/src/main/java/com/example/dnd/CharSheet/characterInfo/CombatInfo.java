@@ -5,17 +5,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 
 public class CombatInfo implements Serializable {
-    private int initiative;
-    private int[] speed;
-    private int armourClass;
+    public int initiative;
+    public int[] speed;
+    public int armourClass;
 
-    private int maxHP;
-    private int currHP;
-    private int tempHP;
-    private int[] hitDice;
+    public int maxHP;
+    public int currHP;
+    public int tempHP;
+    public int[] hitDice;
 
-    private int deathSavesSuccess;
-    private int deathSaveFailure;
+    public int deathSavesSuccess;
+    public int deathSaveFailure;
 
     public CombatInfo(@JsonProperty("initiative") int _initiative, @JsonProperty("speed") int[] _speed,
                       @JsonProperty("armourClass") int _armourClass, @JsonProperty("maxHP") int _maxHP,
@@ -32,4 +32,6 @@ public class CombatInfo implements Serializable {
         deathSavesSuccess = _deathSavesSuccess;
         deathSaveFailure = _deathSaveFailure;
     }
+
+    public int getFirstSpeed() {return speed[0];}
 }

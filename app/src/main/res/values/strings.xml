@@ -57,5 +57,6 @@
     <string name="investigation">Investigation</string>
     <string name="roll_dice_text">roll dice!</string>
     <string name="sampleChar">Char Name Here</string>
+    <string name="roll_some_dice">Roll some dice</string>
     <string name="roll_dice">roll dice</string>
 </resources>

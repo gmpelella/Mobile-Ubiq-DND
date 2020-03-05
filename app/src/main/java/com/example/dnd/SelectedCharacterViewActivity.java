@@ -5,8 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.*;
+
+import com.example.dnd.CharSheet.Character;
 
 public class SelectedCharacterViewActivity extends AppCompatActivity {
+
+    Character sampleChar;
+    EditText charName;
+    //ImageView charView
+    EditText classLevel;
+    EditText races;
+    EditText background;
+    EditText armourClass;
+    EditText initiative;
+    EditText speed;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +39,25 @@ public class SelectedCharacterViewActivity extends AppCompatActivity {
         that's all the fillable things on this window
          */
 
+        charName = (EditText) findViewById(R.id.characterName);
+        classLevel = (EditText) findViewById(R.id.classLevel);
+        races = (EditText) findViewById(R.id.Race);
+        background = (EditText) findViewById(R.id.characterName);
+        armourClass = (EditText) findViewById(R.id.armorClassValue);
+        initiative = (EditText) findViewById(R.id.initiativeValue);
+        speed = (EditText) findViewById(R.id.speedValue);
 
+        sampleChar = (Character) getIntent().getSerializableExtra("charSheet");
 
+        charName.setText(sampleChar.NAME);
+        classLevel.setText(sampleChar.RACE.name + sampleChar.level);
+        races.setText(sampleChar.getFirstClass());
+        background.setText(sampleChar.BACKGROUND);
+        armourClass.setText(sampleChar.combatInfo.armourClass);
+        initiative.setText(sampleChar.combatInfo.initiative);
+        speed.setText(sampleChar.combatInfo.getFirstSpeed());
+
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_character_view);
     }

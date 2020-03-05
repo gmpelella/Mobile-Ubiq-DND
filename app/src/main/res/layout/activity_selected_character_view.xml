@@ -17,7 +17,7 @@
         android:shadowDx="10"
         android:shadowDy="3"
         android:shadowRadius="3"
-        android:text="roll dice"
+        android:text="@string/roll_dice"
         android:textColor="#8EE8CE"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

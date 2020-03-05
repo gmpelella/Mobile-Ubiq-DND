@@ -18,19 +18,19 @@ public class Character implements Serializable {
     public final String PLAYER_NAME;
 
     //character info that can change randomly
-    private int experience;
-    private CombatInfo combatInfo;
+    public int experience;
+    public CombatInfo combatInfo;
 
 
-    private Weapon[] weapons;
-    private Spell[] readiedSpells; //spelling fix
-    private Spell[] spellList;
+    public Weapon[] weapons;
+    public Spell[] readiedSpells; //spelling fix
+    public Spell[] spellList;
 
 
     //character info that changes on lvl up
-    private String[] classes;
-    private int level;
-    private AbilitiesAndProficiencies abilityScores;
+    public String[] classes;
+    public int level;
+    public AbilitiesAndProficiencies abilityScores;
 
 
     //character info that rarely changes
