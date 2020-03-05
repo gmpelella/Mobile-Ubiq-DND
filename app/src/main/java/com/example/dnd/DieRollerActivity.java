@@ -11,22 +11,29 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.dnd.CharSheet.Character;
+
 import java.util.Random;
 
 public class DieRollerActivity extends AppCompatActivity{
+
+    Character sampleChar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.die_roller);
+
+        sampleChar = (Character) getIntent().getSerializableExtra("charSheet");
+
     }
 
 
     //for each button dude function create popup bro
     public void d4(View view) {
         int num = rollRandom(4);
-        Log.d("mytag","uh hello?"+num);
-        //alertDialog(num);
+
+        alertDialog(num);
     }
     public void d6(View view) {
         int num = rollRandom(6);
@@ -78,5 +85,13 @@ public class DieRollerActivity extends AppCompatActivity{
         });
         AlertDialog alertDialog=dialog.create();
         alertDialog.show();
+    }
+
+    public void obBackPressed(){
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra("charSheet", sampleChar);
+        setResult(RESULT_OK, replyIntent);
+
+        this.finish();
     }
 }
